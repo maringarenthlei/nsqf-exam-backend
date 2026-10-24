@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S7LEK0BQ9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5S7LEK0BQ9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIELIT NSQF Practice Examination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- START SCREEN -->
+
+    <section id="start-screen" class="screen start-screen">
+
+        <div class="start-card">
+
+            <img src="assets/nielit-logo.png" alt="NIELIT Logo" class="logo">
+
+            <div class="start-title">
+
+                <img src="assets/icons/monitor.svg" alt="" class="title-icon">
+
+                <div>
+                    <h1>NIELIT NSQF Practice Examination</h1>
+                    <p>Select a course and start your demo exam</p>
+                </div>
+
+            </div>
+
+            <div class="name-box">
+
+                <label for="student-name">
+
+                    <img src="assets/icons/user.svg" alt="">
+                    Enter Student Name
+
+                </label>
+
+                <input type="text" id="student-name" placeholder="Example: Francis">
+
+            </div>
+
+            <!-- COURSE SELECTION -->
+
+            <div class="course-selection">
+
+                <h2>Select Course</h2>
+
+                <label class="course-option">
+
+                    <input type="radio" name="course" value="COAITA">
+
+                    COAITA
+
+                </label>
+
+                <label class="course-option">
+
+                    <input type="radio" name="course" value="CAA">
+
+                    Computer Application Associate (CAA)
+
+                </label>
+
+                <label class="course-option">
+
+                    <input type="radio" name="course" value="FAIT">
+
+                    Foundation of AI Technology
+
+                </label>
+
+            </div>
+
+            <div class="instructions">
+
+                <h2>Instructions</h2>
+
+                <ul>
+
+                    <li>Total Questions:
+                        <strong>100</strong>
+                    </li>
+
+                    <li>Duration:
+                        <strong>90 Minutes</strong>
+                    </li>
+
+                    <li>Pass Mark:
+                        <strong>50%</strong>
+                    </li>
+
+                    <li>No Negative Marking</li>
+
+                    <li>Answer key will be shown after exam completion.</li>
+
+                    <li>You may finish the exam before time ends.</li>
+
+                </ul>
+
+            </div>
+
+            <button id="start-btn" class="primary-btn">
+
+                Start Examination
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- EXAM SCREEN -->
+
+    <section id="exam-screen" class="screen hidden">
+
+        <header class="exam-header">
+
+            <div class="header-left">
+
+                <img src="assets/nielit-logo.png" alt="" class="header-logo">
+
+                <div>
+
+                    <h1>NIELIT NSQF Practice Examination</h1>
+
+                    <p id="candidate-name">
+
+                        Candidate : -
+
+                    </p>
+
+                    <p id="selected-course">
+
+                        Course : -
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="timer-box">
+
+                    <img src="assets/icons/timer.svg" alt="">
+
+                    <span>Time Left:</span>
+
+                    <strong id="timer">
+
+                        01:30:00
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="exam-layout">
+
+            <section class="question-area">
+
+                <div class="question-topbar">
+
+                    <div>
+
+                        <strong>
+
+                            Question No.
+
+                            <span id="question-number">
+
+                                1
+
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span id="question-status-text">
+
+                            Not Answered
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="question-panels">
+
+                    <div class="language-panel hidden">
+
+                        <h2>Hindi</h2>
+
+                        <p id="question-hi"></p>
+
+                        <div class="option-list">
+
+                            <p><strong>A.</strong> <span id="option-a-hi"></span></p>
+
+                            <p><strong>B.</strong> <span id="option-b-hi"></span></p>
+
+                            <p><strong>C.</strong> <span id="option-c-hi"></span></p>
+
+                            <p><strong>D.</strong> <span id="option-d-hi"></span></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="language-panel">
+
+                        <h2>English</h2>
+
+                        <p id="question-en"></p>
+
+                        <div class="option-list">
+
+                            <p><strong>A.</strong> <span id="option-a-en"></span></p>
+
+                            <p><strong>B.</strong> <span id="option-b-en"></span></p>
+
+                            <p><strong>C.</strong> <span id="option-c-en"></span></p>
+
+                            <p><strong>D.</strong> <span id="option-d-en"></span></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="answer-box">
+
+                    <h3>Select Your Answer</h3>
+
+                    <div class="answer-options">
+
+                        <label>
+                            <input type="radio" name="answer" value="A">
+                            A
+                        </label>
+
+                        <label>
+                            <input type="radio" name="answer" value="B">
+                            B
+                        </label>
+
+                        <label>
+                            <input type="radio" name="answer" value="C">
+                            C
+                        </label>
+
+                        <label>
+                            <input type="radio" name="answer" value="D">
+                            D
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="action-row answer-action-row">
+
+                    <button id="submit-answer-btn" class="success-btn">
+
+                        <img src="assets/icons/check.svg" alt="">
+
+                        Submit Answer
+
+                    </button>
+
+                    <button id="reset-answer-btn" class="warning-btn">
+
+                        <img src="assets/icons/reset.svg" alt="">
+
+                        Reset Answer
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <aside class="status-panel">
+
+                <button id="finish-exam-btn" class="danger-btn full-width finish-sidebar-btn">
+
+                    <img src="assets/icons/finish.svg" alt="">
+
+                    Finish Exam
+
+                </button>
+
+                <div class="status-card">
+
+                    <h2>Question Status</h2>
+
+                    <div class="status-summary">
+
+                        <div>
+
+                            <span class="dot answered"></span>
+
+                            Answered:
+
+                            <strong id="answered-count">0</strong>
+
+                        </div>
+
+                        <div>
+
+                            <span class="dot not-answered"></span>
+
+                            Not Answered:
+
+                            <strong id="not-answered-count">100</strong>
+
+                        </div>
+
+                    </div>
+
+                    <div id="question-grid" class="question-grid">
+
+                    </div>
+
+                </div>
+
+                <button id="instruction-btn" class="secondary-btn full-width">
+
+                    <img src="assets/icons/info.svg" alt="">
+
+                    Review Instructions
+
+                </button>
+
+            </aside>
+
+        </main>
+
+    </section>
+
+    <!-- RESULT SCREEN -->
+
+    <section id="result-screen" class="screen result-screen hidden">
+
+        <div class="result-card">
+
+            <img src="assets/nielit-logo.png" alt="" class="logo">
+
+            <h1>Exam Result</h1>
+
+            <p id="result-message" class="result-message">
+
+                You scored 0 out of 100.
+
+            </p>
+
+            <p id="result-course"></p>
+
+            <div class="result-grid">
+
+                <div>
+                    <span>Score</span>
+                    <strong id="score-value">0/100</strong>
+                </div>
+
+                <div>
+                    <span>Result</span>
+                    <strong id="pass-fail-value">-</strong>
+                </div>
+
+                <div>
+                    <span>Correct</span>
+                    <strong id="correct-count">0</strong>
+                </div>
+
+                <div>
+                    <span>Wrong</span>
+                    <strong id="wrong-count">0</strong>
+                </div>
+
+                <div>
+                    <span>Unanswered</span>
+                    <strong id="unanswered-count">0</strong>
+                </div>
+
+                <div>
+                    <span>Percentage</span>
+                    <strong id="percentage-value">0%</strong>
+                </div>
+
+            </div>
+
+            <div class="result-actions">
+
+                <button id="review-btn" class="secondary-btn">
+
+                    <img src="assets/icons/review.svg" alt="">
+
+                    Review Answers
+
+                </button>
+
+                <button id="restart-btn" class="primary-btn">
+
+                    <img src="assets/icons/restart.svg" alt="">
+
+                    Restart Exam
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- REVIEW SCREEN -->
+
+    <section id="review-screen" class="screen hidden">
+
+        <header class="review-header">
+
+            <h1>Answer Review</h1>
+
+            <button id="back-to-result-btn" class="secondary-btn">
+
+                Back to Result
+
+            </button>
+
+        </header>
+
+        <div id="review-list" class="review-list">
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<!-- Republish -->

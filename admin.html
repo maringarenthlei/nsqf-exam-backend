@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSQF Exam Results</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="start-card admin-card">
+    <h1>Exam results</h1>
+    <p>Enter the administrator token configured on the server.</p>
+    <label for="admin-token">Administrator token</label>
+    <input id="admin-token" type="password" autocomplete="current-password">
+    <button id="load-results" class="primary-btn">View results</button>
+    <p id="admin-message" role="status"></p>
+    <div class="table-wrap"><table id="results-table" hidden>
+      <thead><tr><th>Completed</th><th>Student</th><th>Course</th><th>Score</th><th>Percentage</th><th>Status</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
